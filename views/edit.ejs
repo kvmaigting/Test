@@ -1,0 +1,11 @@
+<%- include('partials/header'); %>
+<h1>Compose</h1>
+<form action="/edit/<%= postIndex %>" method="post">
+    <label class="form-label">Title</label>
+    <input type="text" name="postTitle" class="form-control" value = "<%= postTitle %>">
+    <label class="form-label">Post</label>
+    <textarea cols="30" rows="10" class="form-control" name="postBody"><%= postBody %></textarea>
+    <button type="submit" class="btn btn-primary publish">Save</button>
+    <a href="/">Cancel</a>
+</form>
+<%- include('partials/footer'); %>
